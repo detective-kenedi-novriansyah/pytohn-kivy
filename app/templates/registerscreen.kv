@@ -1,0 +1,45 @@
+<RegisterScreen>
+    orientation: "vertical"
+    padding: self.size[0]/6,10
+    spacing: 10
+    BoxLayout:
+        Label:
+            text: "Register Screen"
+            font_size: 40
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        TextInput:
+            id: u_field
+            hint_text: "Username"
+            on_text_validate: e_field.focus = True
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        TextInput:
+            id: e_field
+            hint_text: "Email"
+            on_text_validate: p_field.focus = True
+    BoxLayout:
+        size_hint_y: None
+        orientation: "horizontal"
+        height: 30
+        TextInput:
+            id: p_field
+            hint_text: "Password"
+            password: True
+            on_text_validate: cp_field.focus = True
+        TextInput:
+            id: cp_field
+            hint_text: "Confirm Password"
+            password: True
+    BoxLayout:
+        size_hint_y: None
+        orientation: "horizontal"
+        height: 30
+        Button:
+            text: "Sign Up"
+        Button:
+            text: "Already have an account?"
+            on_press: root.instance_r()
+    

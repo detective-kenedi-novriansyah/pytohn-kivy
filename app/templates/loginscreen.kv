@@ -1,0 +1,29 @@
+<LoginScreen>
+    orientation: "vertical"
+    padding: self.size[0]/6,10
+    spacing: 10
+    BoxLayout:
+        Label:
+            text: "<KND-NEWBIE/>"
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        TextInput:
+            id: u_field
+            hint_text: "Username"
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        TextInput:
+            id: p_field
+            hint_text: "Password"
+            password: True
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        orientation: "horizontal"
+        Button:
+            text: "Log In"
+        Button:
+            text: "Create new Account"
+            on_press: root.instance_r()
